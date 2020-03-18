@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>guestbook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <form name="guestbook" id="myForm">
+        <div>
+            <input type="text" id="text"> Title
+            <div>
+                <textarea name="contents" id="contents">Contents</textarea>
+                <div>
+                    <input type="text" id="signature"> Signature
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="w" id="woman" checked> Woman
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="m" id="man"> Man
+                </div>
+                <div>
+                    <input type="email" id="mail"> E-mail <br>
+                </div>
+                <div>
+                    <input type="checkbox" id="agree" name="yes" checked>I agree to display my email address
+                </div>
+                <div>
+                    <input type="submit" value="send">
+                </div>
+
+    </form>
+    <div id="content">
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
