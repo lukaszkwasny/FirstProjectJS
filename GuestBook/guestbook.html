@@ -4,37 +4,95 @@
     <meta charset="UTF-8">
     <title>guestbook</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-<div>
+
+
+<div class="container">
     <form name="guestbook" id="myForm">
-        <div>
-            <input type="text" id="text"> Title
-            <div>
-                <textarea name="contents" id="contents">Contents</textarea>
-                <div>
-                    <input type="text" id="signature"> Signature
+
+        <div class="mt-4">
+            <div class="form-group row">
+                <label for="title" class="col-sm-2 col-form-label">
+                    Tittle
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="title">
                 </div>
-                <div>
-                    <input type="radio" name="gender" value="w" id="woman" checked> Woman
+            </div>
+
+            <div class="form-group row">
+                <label for="contents" class="col-sm-2 col-form-label">
+                    Contents
+                </label>
+                <div class="col-sm-8">
+                    <textarea name="contents" class="form-control" id="contents"></textarea>
                 </div>
-                <div>
-                    <input type="radio" name="gender" value="m" id="man"> Man
+            </div>
+
+            <div class="form-group row">
+                <label for="signature" class="col-sm-2 col-form-label">
+                    Signature
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="signature">
                 </div>
-                <div>
-                    <input type="email" id="mail"> E-mail <br>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" value="woman" id="woman" checked>
+                            <label class="form-check-label" for="woman">
+                                Woman
+                            </label>
+                        </div>
+
+                        <div class="form-check ">
+                            <input type="radio" class="form-check-input" name="gender" value="man" id="man" >
+                            <label class="form-check-label" for="man">
+                                Man
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" id="agree" name="yes" checked>I agree to display my email address
+            </fieldset>
+
+            <div class="form-group row">
+                <label for="mail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="mail">
                 </div>
-                <div>
-                    <input type="submit" value="send">
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-2">Checkbox</div>
+                <div class="col-sm-8">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agree" name="yes" checked>
+                        <label class="form-check-label" for="agree">
+                            I agree to display my email address
+                        </label>
+                    </div>
                 </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" value="send">Send</button>
+                </div>
+            </div>
+        </div>
 
     </form>
-    <div id="content">
-    </div>
 </div>
+<div id="content">
+
+</div>
+
 <script src="main.js"></script>
 </body>
 </html>
