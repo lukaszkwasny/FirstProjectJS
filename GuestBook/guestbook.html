@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>guestbook</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div class="mt-4">
             <div class="form-group row">
                 <label for="title" class="col-sm-2 col-form-label">
-                    Tittle
+                    Title
                 </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="title">
@@ -72,7 +72,7 @@
                 <div class="col-sm-2">Checkbox</div>
                 <div class="col-sm-8">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agree" name="yes" checked>
+                        <input class="form-check-input" type="checkbox" id="agree" name="check" checked>
                         <label class="form-check-label" for="agree">
                             I agree to display my email address
                         </label>
@@ -89,10 +89,38 @@
 
     </form>
 </div>
+
 <div id="content">
 
 </div>
 
-<script src="main.js"></script>
+
+<script src="js/handlebars.min-v4.7.3.js"></script>
+
+<script id="tpl" type="text/x-handlebars-template">
+    <div class='card mt-2'>
+        <div class='card-body mt-4'>
+            <dl class='row'>
+                <dt class='col-sm-3'>Title: </dt>
+                <dd class='col-sm-9'>{{title}}</dd>
+                <dt class='col-sm-3'>Signature: </dt>
+                <dd class='col-sm-9'>{{signature}}</dd>
+                <dt class='col-sm-3'>Contents: </dt>
+                <dd class='col-sm-9'>{{contents}}</dd>
+                <dt class='col-sm-3'>Gender: </dt>
+                <dd class='col-sm-9'>{{gender}}</dd>
+                <dt class='col-sm-3'>E-mail:</dt>
+                <dd class='col-sm-9'>
+                    {{#if checkBox}}
+                        {{email}}
+                    {{else}}
+                        hidden
+                    {{/if}}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</script>
+<script src="js/main.js"></script>
 </body>
 </html>
